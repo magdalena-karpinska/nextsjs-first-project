@@ -40,6 +40,7 @@ export async function createInvoice(formData: FormData) {
     };
   }
   revalidatePath("/dashboard/invoices");
+  // redirect outside the try/catch as it works by throwing an error
   redirect("/dashboard/invoices");
 }
 
